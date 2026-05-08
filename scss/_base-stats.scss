@@ -1,0 +1,79 @@
+.ascension-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "gacha"
+        "namecard"
+        "stats";
+    grid-gap: 20px;
+    margin: 20px 0 30px;
+
+    @include mediumScreen {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "gacha stats"
+        "namecard stats";
+        grid-gap: 20px 60px;
+    }
+
+    .gacha-art {
+        grid-area: gacha;
+        display: flex;
+        justify-content: center;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    }
+    .namecard {
+        grid-area: namecard;
+        display: flex;
+        justify-content: center;
+
+        img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 5px;
+        }
+    }
+
+
+    .base-stats-wrapper {
+        grid-area: stats;
+
+        @include mediumScreen {
+            margin: 0 auto;
+            width: 400px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+            .base-stat-single {
+                border-radius: 5px;
+                display: flex;
+                flex-flow: row;
+                justify-content: space-between;
+                background-color: $bg-color-lighter;
+                padding: 10px;
+                margin-bottom: 5px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                span {
+                    font-size: 0.8em;
+
+                    &.base-stat-name {
+                        text-align: left;
+                        max-width: 70%;
+                    }
+
+                    &.base-stat-number {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+}

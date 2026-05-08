@@ -1,0 +1,215 @@
+/* IMPORTS */
+@import "rwd-queries";
+@import "variables-and-mixins";
+@import "resets";
+@import "audio";
+@import "mouse-scroll";
+@import "drip";
+@import "base-stats";
+@import "prefarm";
+@import "filters";
+@import "talents";
+
+/* FONTFACE */
+@font-face {
+    font-family: HYWenHei Extended;
+    src: url('../HYWenHei Extended.ttf');
+}
+
+/* MY CSS */
+/*body {
+    background-image: linear-gradient($bg-color 80%, rgba($bg-color, 0)), url("../images/Columbina_realm.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}*/
+
+p {
+    line-height: 1.5em;
+    text-align: left;
+}
+
+span {
+    line-height: 1.3em;
+}
+
+header {
+    min-height: 30vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient(rgba($bg-color, 0) 60%, $bg-color), url("../images/Columbina_countdown_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include mediumScreen {
+        min-height: 100vh;
+    }
+
+    h1 {
+        font-size: 1em;
+        margin-bottom: 0.5em;
+
+        @include mediumScreen {
+            font-size: 1.5em;
+        }
+
+        @include largeScreen {
+            font-size: 2.5em;
+        }
+    }
+
+    h2 {
+        font-size: 2em;
+
+        @include mediumScreen {
+            font-size: 3em;
+        }
+
+        @include largeScreen {
+            font-size: 5em;
+        }
+    }
+
+    h3 {
+        font-size: .5em;
+        margin-top: 0.8em;
+
+        @include mediumScreen {
+            font-size: .8em;
+        }
+
+        @include largeScreen {
+            font-size: 1.2em;
+        }
+    }
+}
+.hide {
+    display: none;
+}
+
+main {
+    margin: 30px auto;
+    padding: 0 20px;
+    max-width: 500px;
+
+    @include mediumScreen {
+        max-width: 1200px;
+        padding: 0 50px;
+        margin: 30px auto;
+    }
+
+    @include largeScreen {}
+
+    h1 {
+        text-align: left;
+        font-size: 24px;
+        margin-bottom: 5px;
+
+        a,
+        a:visited,
+        a:hover,
+        a:focus {
+            text-decoration: none;
+        }
+    }
+
+    p.obs {
+        font-size: 12px;
+        opacity: 0.5;
+    }
+
+    span.hydro {
+        color: #1c72fd;
+    }
+
+    span.dendro {
+        color: #7bb42d;
+    }
+
+    span.electro {
+        color: #d376f0;
+    }
+}
+
+footer {
+    .inner-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 50px;
+        z-index: 2;
+        background: darken($bg-color, 2.5%);
+        min-height: 60px;
+
+
+        font-size: .8rem;
+
+        @include onlyMobile {
+            padding: 15px 30px;
+            flex-direction: column;
+        }
+
+        @include largeScreen {
+            padding: 0 80px;
+        }
+
+        .signature-wrap {
+            display: flex;
+            flex-flow: column;
+            grid-gap: 5px;
+
+            @include onlyMobile {
+                margin-bottom: 15px;
+            }
+
+            #signature,
+            #donate {
+                opacity: .2;
+                text-align: center;
+                transition: ease .2s;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                a,
+                a:link,
+                a:visited,
+                a:hover {
+                    text-decoration: none;
+                }
+
+                @include mediumScreen {
+                    text-align: left;
+                }
+            }
+        }
+
+        .other-links {
+            display: flex;
+            flex-direction: row;
+            grid-gap: 20px;
+
+            @include mediumScreen {
+                grid-gap: 30px;
+            }
+
+            a {
+                img {
+                    height: 30px;
+
+                    opacity: .2;
+                    transition: ease .2s;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

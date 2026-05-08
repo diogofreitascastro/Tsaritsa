@@ -1,0 +1,120 @@
+.talents-wrapper,
+.passives-wrapper,
+.constellations-wrapper {
+    display: grid;
+    grid-gap: 20px;
+    margin: 20px 0 30px;
+
+    .talent-sub-wrapper,
+    .passives-sub-wrapper,
+    .constellations-sub-wrapper {
+        background-color: $bg-color-lighter;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "title"
+            "description"
+            "details"
+            "video";
+        grid-gap: 20px 40px;
+        flex-flow: column;
+        padding: 20px;
+
+        @include mediumScreen {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: "title title title"
+                "description description details"
+                /*"description description video"*/;
+        }
+
+        .talent-name {
+            grid-area: title;
+            display: flex;
+            align-items: center;
+            grid-gap: 10px;
+            border-bottom: 2px solid lighten($bg-color-lighter, 10%);
+            padding-bottom: 10px;
+
+            img {
+                max-height: 50px;
+            }
+
+            h2 {
+                text-align: left;
+            }
+        }
+
+        .talent-description {
+            grid-area: description;
+
+            h3 {
+                font-size: 0.8em;
+                margin-bottom: 10px;
+                text-align: left;
+            }
+
+            p {
+                font-size: 0.8em;
+                margin-bottom: 20px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .talent-MV-wrapper {
+            grid-area: details;
+
+            .talent-MV {
+                border-radius: 5px;
+                display: flex;
+                flex-flow: row;
+                justify-content: space-between;
+                background-color: rgba($bg-color, 0.5);
+                padding: 10px;
+                margin-bottom: 5px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                span {
+                    font-size: 0.8em;
+
+                    &.MV-name {
+                        text-align: left;
+                        max-width: 65%;
+                    }
+
+                    &.MV-number {
+                        text-align: right;
+                        max-width: 30%;
+                    }
+                }
+            }
+        }
+
+        .talent-video {
+            display: none;
+            /*display: flex;*/
+            justify-content: center;
+            grid-area: video;
+        }
+    }
+
+    .passives-sub-wrapper,
+    .constellations-sub-wrapper {
+        display: flex;
+    }
+}
+
+.passives-wrapper,
+.constellations-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+
+    @include mediumScreen {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

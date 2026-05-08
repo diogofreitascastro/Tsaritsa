@@ -1,0 +1,28 @@
+.filters {
+    text-align: center;
+    margin: auto;
+    max-width: fit-content;
+    margin-bottom: 20px;
+
+    ul {
+        display: flex;
+        grid-gap: 10px;
+
+        li {
+            padding: 7.5px;
+            font-size: .8em;
+            border-radius: 5px;
+            background-color: $bg-color-lighter;
+            cursor: pointer;
+
+            @include mediumScreen {
+                padding: 10px;
+                font-size: 1em;
+            }
+
+            &.active-filter {
+                background-color: lighten($bg-color-lighter, 10%);
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.drip-wrapper {
+    grid-gap: 30px;
+    margin: 20px 0 30px;
+
+    @include mediumScreen {
+        grid-gap: 60px;
+    }
+
+    h2 {
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    .drip-images {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "vertical square square video";
+
+        @include mediumScreen {
+            grid-gap: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #vertical-drip {
+            grid-area: vertical;
+        }
+        #square-drip {
+            grid-area: square;
+        }
+        #video-drip {
+            grid-area: video;
+        }
+
+        >* {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            img {
+                max-width: 100%;
+                height: auto;
+                @include mediumScreen {
+                    max-height: 300px;
+                }
+            }
+        }
+    }
+}

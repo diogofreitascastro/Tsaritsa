@@ -1,0 +1,20 @@
+header {
+    .audio-wrapper {
+        display: none;
+
+        @include mediumScreen {
+            display: inline-block;
+        }
+
+        audio {
+            margin-top: 10em;
+            background-color: #f9eee1;
+            filter: invert(1);
+            border-radius: 100px;
+
+            &::-webkit-media-controls-panel {
+                background-color: #f9eee1;
+            }
+        }
+    }
+}
