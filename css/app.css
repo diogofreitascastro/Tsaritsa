@@ -158,7 +158,7 @@ p { line-height: 1.5em; text-align: left; }
 
 span { line-height: 1.3em; }
 
-header { min-height: 30vh; display: flex; flex-flow: column; justify-content: center; align-items: center; background-image: linear-gradient(rgba(6, 17, 30, 0) 60%, #06111E), url("../images/Tsaritsa_countdown_bg.png"); background-size: cover; background-repeat: no-repeat; background-position: center; }
+header { min-height: 30vh; display: flex; flex-flow: column; justify-content: center; align-items: center; background-image: linear-gradient(rgba(6, 17, 30, 0) 60%, #06111E), url("../images/Tsaritsa_countdown_bg.jpg"); background-size: cover; background-repeat: no-repeat; background-position: center; }
 @media (min-width: 768px) { header { min-height: 100vh; } }
 header h1 { font-size: 1em; margin-bottom: 0.5em; }
 @media (min-width: 768px) { header h1 { font-size: 1.5em; } }
