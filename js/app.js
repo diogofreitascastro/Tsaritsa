@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // First countdown
-  var countDownDate1 = new Date("Dec 16, 2026 22:00:00").getTime();
+  var countDownDate1 = new Date("Jan 27, 2027 22:00:00").getTime();
   var x1 = setInterval(function () {
     var now = new Date().getTime();
     var distance = countDownDate1 - now;
