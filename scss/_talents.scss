@@ -21,10 +21,10 @@
         padding: 20px;
 
         @include mediumScreen {
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-areas: "title title title"
-                "description description details"
-                /*"description description video"*/;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-areas: "title title title title title"
+                "description description description details details"
+                /*"description description description video video"*/;
         }
 
         .talent-name {
